@@ -1,0 +1,20 @@
+.odd-element {
+    background-color: rgba(255, 192, 203, 0.8);
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+#element-two {
+    color: blue;
+    font-size: 36px;
+}
+
+/* This is now a reusable utility class! */
+.bigger-font {
+    font-size: 24px;
+}
+
+#element-four {
+    background-color: lightgreen;
+    font-size: 24px;
+    font-weight: 700;
+}
