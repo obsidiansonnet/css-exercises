@@ -4,6 +4,17 @@ html, body {
   height: 100%;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+  /* outline: 0.5px solid black; */
+}
+
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
@@ -20,14 +31,28 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 15px;
+  gap: 5px;
 }
+
+.main-content{
+  display:flex;
+  gap: 15px;
+  align-items: flex-start;
+  }
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
 
 .icon {
   color: royalblue;
   font-size: 26px;
   font-weight: 700;
   background: lavender;
-  width: 42px;
+  min-width: 42px;
   height: 42px;
   border-radius: 50%;
   display: flex;
@@ -35,19 +60,16 @@ body {
   justify-content: center;
 }
 
-.close-button {
-  background: #eee;
-  border-radius: 50%;
-  color: #888;
-  font-weight: 400;
-  font-size: 16px;
-  height: 24px;
-  width: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #eee;
-  padding: 0;
+.header {
+  font-size: 1.3em;
+  font-weight:900;
+  }
+
+.text {
+  font-size: 0.8em;
+  color: black; 
+  font-weight:500;
+  align-self: flex-start;
 }
 
 button {
@@ -55,7 +77,7 @@ button {
   padding: 8px 16px;
   border-radius: 8px;
 }
-
+  
 button.continue {
   background: royalblue;
   border: 1px solid royalblue;
@@ -66,4 +88,17 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+.close-button {
+  background: #eee;
+  border-radius: 50%;
+  color: #888;
+  font-weight: 400;
+  font-size: 16px;
+  height: 24px;
+  min-width: 24px;
+  border: 1px solid #eee;
+  padding: 0;
+  margin-left: auto;
 }
